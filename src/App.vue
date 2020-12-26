@@ -10,7 +10,6 @@
           <bold>Введите текст для анализа: </bold>
         </div>
         <v-textarea
-            color="teal"
         >
         </v-textarea>
       </v-main>
@@ -24,16 +23,13 @@
     </v-btn>
     <v-spacer></v-spacer>
     <v-btn
-        color="primary"
         type="Отправить на обработку"
+        @click="sendForm"
     >
       Register
     </v-btn>
   </v-card-actions>
   </v-form>
-
-
-
 
 </template>
 
@@ -50,11 +46,11 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  /*font-family: Avenir, Helvetica, Arial, sans-serif;*/
+  /*-webkit-font-smoothing: antialiased;*/
+  /*-moz-osx-font-smoothing: grayscale;*/
+  /*text-align: center;*/
+  /*color: #2c3e50;*/
+  /*margin-top: 60px;*/
 }
 </style>
