@@ -3,15 +3,47 @@
 <!--    <img alt="Vue logo" src="./assets/logo.png">-->
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
 <!--  </div>-->
+  <v-form>
+  <v-card flat>
+      <v-main>
+        <div>
+          <bold>Введите текст для анализа: </bold>
+        </div>
+        <v-textarea
+            color="teal"
+        >
+        </v-textarea>
+      </v-main>
+  </v-card>
+  <v-card-actions>
+    <v-btn
+        text
+        @click="resetForm"
+    >
+      Cancel
+    </v-btn>
+    <v-spacer></v-spacer>
+    <v-btn
+        color="primary"
+        type="Отправить на обработку"
+    >
+      Register
+    </v-btn>
+  </v-card-actions>
+  </v-form>
+
+
+
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld
   }
 }
 </script>
