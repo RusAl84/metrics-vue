@@ -1,56 +1,45 @@
 <template>
-<!--  <div id="app">-->
-<!--    <img alt="Vue logo" src="./assets/logo.png">-->
-<!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-<!--  </div>-->
-  <v-form>
-  <v-card flat>
-      <v-main>
-        <div>
-          <bold>Введите текст для анализа: </bold>
-        </div>
-        <v-textarea
-        >
-        </v-textarea>
-      </v-main>
-  </v-card>
-  <v-card-actions>
-    <v-btn
-        text
-        @click="resetForm"
-    >
-      Cancel
-    </v-btn>
-    <v-spacer></v-spacer>
-    <v-btn
-        type="Отправить на обработку"
-        @click="sendForm"
-    >
-      Register
-    </v-btn>
-  </v-card-actions>
-  </v-form>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">TextForm</router-link> |
+      <router-link to="/TextAnaliz">TextAnaliz</router-link>
+    </div>
+    <router-view/>
+<!--    <TextForm/>-->
+  </div>
 
 </template>
-
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-
+import TextForm from './components/TextFormC.vue';
 export default {
   name: 'App',
   components: {
-    // HelloWorld
-  }
-}
+    // TextForm,
+  },
+  data: () => ({
+    text:'',
+  }),
+};
 </script>
-
-<style>
+<style lang="scss">
 #app {
-  /*font-family: Avenir, Helvetica, Arial, sans-serif;*/
-  /*-webkit-font-smoothing: antialiased;*/
-  /*-moz-osx-font-smoothing: grayscale;*/
-  /*text-align: center;*/
-  /*color: #2c3e50;*/
-  /*margin-top: 60px;*/
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
